@@ -1,6 +1,7 @@
 package id.web.frizky.spring;
 
 import id.web.frizky.spring.service.HelloWorld;
+import id.web.frizky.spring.service.HelloWorldSingleton;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -20,6 +21,14 @@ public class HelloMain {
         System.out.println("");
         System.out.println("FROM SPRING");
         helloWorldBean.helloWorld();
+        System.out.println(helloWorldBean.getCounter());
+
+        HelloWorldSingleton helloWorldSingleton = springContext.getBean(HelloWorldSingleton.class);
+        System.out.println("");
+        System.out.println("FROM SPRING");
+        helloWorldSingleton.helloWorld();
+        helloWorldSingleton = springContext.getBean(HelloWorldSingleton.class);
+        helloWorldSingleton.helloWorld();
     }
 
 }
