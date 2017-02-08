@@ -9,8 +9,12 @@ public class HelloMain {
 
     public static void main(String[] args) {
         ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("application-context.xml");
-        RunnerClass runner = new RunnerClass();
-        runner.run();
+
+        ContextLookup runner = ContextLookup.buildContext();
+        HelloWorld resourceHelloWorld = runner.getResourceHelloWorld();
+        resourceHelloWorld.helloWorld();
+
+
     }
 
 }
