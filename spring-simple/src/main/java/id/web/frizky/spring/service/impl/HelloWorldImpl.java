@@ -1,13 +1,17 @@
-package id.web.frizky.spring;
+package id.web.frizky.spring.service.impl;
 
+import id.web.frizky.spring.service.HelloWorld;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by F.Frizky on 4/11/2016.
  */
-public class HelloWorld {
-    Logger LOG = Logger.getLogger(HelloWorld.class);
+@Component
+public class HelloWorldImpl implements HelloWorld {
+    Logger LOG = Logger.getLogger(HelloWorldImpl.class);
 
+    @Override
     public void helloWorld() {
         StringBuilder stringBuilder = new StringBuilder("\n");
         stringBuilder.append("                                              .-'''-.                               .-'''-.                               \n");

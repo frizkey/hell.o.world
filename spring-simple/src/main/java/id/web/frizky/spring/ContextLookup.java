@@ -1,5 +1,7 @@
 package id.web.frizky.spring;
 
+import id.web.frizky.spring.service.HelloWorld;
+import id.web.frizky.spring.service.impl.HelloWorldImpl;
 import org.apache.log4j.Logger;
 
 /**
@@ -13,7 +15,7 @@ public class ContextLookup {
     private HelloWorld helloWorld;
 
     private ContextLookup() {
-        this.helloWorld = new HelloWorld();
+        this.helloWorld = new HelloWorldImpl();
     }
 
     public static ContextLookup buildContext() {
