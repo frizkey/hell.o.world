@@ -19,13 +19,13 @@ public class HelloMain {
         ClassPathXmlApplicationContext springContext = new ClassPathXmlApplicationContext("application-context.xml");
         HelloWorld helloWorldBean = springContext.getBean(HelloWorld.class);
         System.out.println("");
-        System.out.println("FROM SPRING");
+        System.out.println("FROM SPRING PROTOTYPE");
         helloWorldBean.helloWorld();
-        System.out.println(helloWorldBean.getCounter());
+//        System.out.println(helloWorldBean.getCounter());
 
         HelloWorldSingleton helloWorldSingleton = springContext.getBean(HelloWorldSingleton.class);
         System.out.println("");
-        System.out.println("FROM SPRING");
+        System.out.println("FROM SPRING SINGLETON");
         helloWorldSingleton.helloWorld();
         helloWorldSingleton = springContext.getBean(HelloWorldSingleton.class);
         helloWorldSingleton.helloWorld();
