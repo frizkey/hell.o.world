@@ -13,7 +13,7 @@ package id.web.frizky.tdd.pricing;
  * Supermarket
  * 1. buy 1 items, 6500 IDR
  * 2. three for a 10000 IDR (so what’s the price if I buy 4, or 5?)
- * 3. buy four, get one free (so does the third item have a price?)
+ * 3. buy four, get one free (so does the fifth item have a price?)
  */
 public class Supermarket {
     private Item theOnlyItem;
